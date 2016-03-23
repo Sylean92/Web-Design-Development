@@ -31,9 +31,9 @@
 		.winTitle {width:85%; float:left; padding-top:12px; height:100%; padding-left:10px; font-family:AR BLANCA; font-size:20px; color:#744176;}
 		
 		
-		.imageIconsL:hover  {opacity: .5; }
-		.imageIconsR:hover {opacity: .5; }
-		.imageIconsM:hover {opacity: .5; }
+		.imageIconsL:hover  {opacity: .5!important; }
+		.imageIconsR:hover {opacity: .5!important; }
+		.imageIconsM:hover {opacity: .5!important; }
 		
 		/* Tablet and Phone un-hidden */
 		#sliderPicker{width:75%; clear:both; height:80px; margin-left:auto; margin-right:auto; background-color:white; display:block;}
