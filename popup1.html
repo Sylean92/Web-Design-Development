@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#aa {
+  font-weight: bold;
+  position:fixed;
+  left:0;
+  right:0;
+  margin: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100px;
+  height: auto;
+  padding: 15px;  
+  background: gold;
+  text-align: center;
+  box-sizing: content-box;
+  border: 4px dashed black;
+}
+
+button {
+color:white;
+background: crimson; 
+padding: 15px;
+}
+</style>
+<script>
+	function show(){
+var stats =  document.getElementById("aa").style.display;
+  
+if (stats == "none"){  
+document.getElementById("aa").style.display = "inline-block";
+} else {
+document.getElementById("aa").style.display = "none";  
+}
+}
+</script>
+</head>
+
+<body>
+
+    <div id=aa style="display:none">CONTENT</div>
+	<button onClick=show()>click</button>
+
+
+
+</body>
+</html>
+

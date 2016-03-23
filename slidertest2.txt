@@ -1,0 +1,10 @@
+
+<div id="container">
+	<ul>
+	<li><img src="Images/HDBackground.jpg" width="604" height="453" /></li>
+	<li><img src="Images/header4.jpg" width="604" height="453" /></li>
+	<li><img src="Images/HDBackground.jpg" width="604" height="453" /></li>
+	</ul>
+	<span class="button prevButton"></span>
+	<span class="button nextButton"></span>
+	</div>	

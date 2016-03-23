@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Simple Quiz</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	
+	<style>
+	// JS executed after window has been loaded
+function removeQuestions() {
+    var choices = document.forms.choices.elements[0].children;
+
+    // remove choices
+    while (choices.length > 0) {
+        var choice = choices[0];
+        choice.parentNode.removeChild(choice);
+    }
+}
+
+window.onload = removeQuestions;
+	
+	</style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <h2>Question</h2>
+    <p id="question"></p>
+    <form name="choices">
+        <fieldset>
+            <!-- insert questions here dynamically via javascript! -->
+            <label><input type="radio" name="choice" value="1st">First-class</label>
+            <label><input type="radio" name="choice" value="2day">2-day Air</label>
+            <label><input type="radio" name="choice" value="overnite">Overnight</label>
+        </fieldset>
+    </form>
+
+</body>
+</html>

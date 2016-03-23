@@ -1,18 +1,20 @@
 		
-		@media screen and (orientation:landscape) and (min-width:1024px) {
+		@media screen and (orientation:landscape) and (max-width:639px) {
+		
 		
 		#nav2{height:210px; width:100%; overflow: auto; padding:0; margin:0; position:fixed; z-index:10; background-inherit;
 		background-image:url(Images/HeaderImg2.png); background-repeat:no-repeat; background-size:100% 400px; }
-        #topheader{float:middle; margin-left:auto; border-radius:15px; background-color:rgba(255,255,255,.7); margin-right:auto; width:85%;height:200px;}
-        html{padding:0;margin:0; width:100%;}
-        body{padding:0;margin:0; width:100%;}
-		#top{width:85%; margin-left:auto; margin-right: auto; height:600px; padding-top:75px; border-bottom:2px solid white; background-image:url(Images/header4.jpg); background-repeat:no-repeat; background-size:100% 100%;}
+        #top{width:85%; margin-left:auto; margin-right: auto; height:150px; padding-top:450px; border-bottom:2px solid white; background-image:url(Images/header4.jpg); background-repeat:no-repeat; background-size:100% 100%;}
+		
+		#topheader{float:middle; margin-left:auto; border-radius:15px; background-color:rgba(255,255,255,.7); margin-right:auto; width:85%;height:200px;}
+        html{padding:0;margin:0; min-width: 600px; width:100%;}
+        body{padding:0;margin:0; width:100%; height:600px;}
 		.zoom {
 			zoom: -2;
 		}
 		#SyleanTitle{
-		margin-left:auto; font-size:60px; font-family: AR BLANCA; color:black; margin-right:auto; text-align:center;
-		}
+		margin-left:auto; font-size:30px; font-family: AR BLANCA; color:black; margin-right:auto; text-align:center;
+		} 
 		#cupcakeSystem{
 		color:#57285d; font-family:AR BLANCA; font-size:45px;
 		}
@@ -20,74 +22,37 @@
 		margin-left:auto; margin-right:auto; text-align:center;
 		}
 		#middle{
-		width:85%; height:2000px; margin-left: auto; margin-right: auto; border-top:2px solid gray; background-image:url(Images/cheap_diagonal_fabric.png); 
+		width:85%; height:auto; margin-left: auto; margin-right: auto; border-top:2px solid gray; background-image:url(Images/cheap_diagonal_fabric.png); 
 		}
 		#SeasonalDestop{
 		width:100%; text-align: center; opacity:.8; height:auto; clear:both;
 		}
-		.popTop{width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;}
-		
-		
-		
+
 		.imageIconsL:hover  {opacity: .5; }
 		.imageIconsR:hover {opacity: .5; }
 		.imageIconsM:hover {opacity: .5; }
-		.titleText {font-size:60px;} 
+		.titleText {font-size:35px;}
 		
-		/* Tablet and Phone hidden for Desktop*/
-		#sliderPicker{width:75%; clear:both; height:80px; margin-left:auto; margin-right:auto; background-color:white; display:none;}
+		h2 {font-size:40px;}
+		/* Tablet and Phone un-hidden */
+		#sliderPicker{width:50%; clear:both; height:70px; margin-left:auto; margin-right:auto; background-color:white; display:block; font-size:10px;}
 		#WeddingSlider{
-		float:left: display:block; width:33.3%; font-size:20px; font-family: AR BLANCA; margin:0; height:100%; border:none; background-color:white; color:black;
+		float:left: display:none; width:33.3%; font-size:10px; font-family: AR BLANCA; margin:0; height:100%; border:none; background-color:white; color:black;
 		}
 		#SeasonalSlider{
-		float:left: display:block; width:33.3%; font-size:20px; font-family: AR BLANCA; margin:0; height:100%; border:none; background-color:white; color:black;
+		float:left: display:none; width:33.3%; font-size:20px; font-family: AR BLANCA; margin:0; height:100%; border:none; background-color:white; color:black;
 		}
 		#PartySlider{
-		float:right: display:block; width:33.3%; font-size:20px; font-family: AR BLANCA; margin:0; height:100%; border:none; background-color:white; color:black;
+		float:right: display:none; width:33.3%; font-size:20px; font-family: AR BLANCA; margin:0; height:100%; border:none; background-color:white; color:black;
 		}
 		#WeddingSlider:hover {background-color:grey;}
 		#SeasonalSlider:hover {background-color:grey;}
 		#PartySlider:hover {background-color:grey;}
-		.submit {margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;}
-		#prev {  margin-right: 10px;
-			float: left;
-			color: white;
-			background: none; 
-			padding: 15px;
-		}
-		#next {  margin-right: 10px;
-			float: left;
-			color: white;
-			background: none; 
-			padding: 15px;
-		}
-		#prev1 {  margin-right: 10px;
-			float: left;
-			color: white;
-			background: none; 
-			padding: 15px;
-		}
-		#nex1 {  margin-right: 10px;
-			float: left;
-			color: white;
-			background: none; 
-			padding: 15px;
-		}
-		#prev2 {  margin-right: 10px;
-			float: left;
-			color: white;
-			background: none; 
-			padding: 15px;
-		}
-		#next2 {  margin-right: 10px;
-			float: left;
-			color: white;
-			background: none; 
-			padding: 15px;
-		}
+
+		#WeddingSec{display:none;}
+		#PartySec{display:none;}
 		
-		.service {width:300px} 
-		
+		.
 		/* *********************************************************** */
 		.zoom-moz {
 			-moz-transform: scale(-2);
@@ -120,9 +85,10 @@
 		#left {float:left; padding-left:15px; margin-top:20px; width:auto;}
 		#main {float:middle; margin-left:auto; margin-right:auto; width:100%; height:700px; }
 		#main2 {height:400px;}
-		#right {float:right; margin-top:20px; width:auto; padding-left:10px;}
-		#leftsidebar {width:35%;height:450px; float:left; border-radius:5px; }
-		#leftsidebar2 {padding-left:10%;width:40%;height:450px; float:left; border-radius:5px; }
+		#right {float:right; margin-top:20px; width:auto; }
+		#right button {}
+		#leftsidebar {width:35%;height:450px; float:left; border-radius:5px; font-size:14px;}
+		#leftsidebar2 {width:40%;height:450px; float:left; border-radius:5px; }
 		#sections {width:100%;height:auto; float:left; border-radius:5px; }
 		#footer{width:100%;height:200px;background-color:white; margin-bottom:0;padding-bottom:0; border-top:3px solid grey;}
 		#right #barLog {width:5px; padding-left:0; padding-right:0; color:black;}
@@ -151,14 +117,6 @@
 		height:80px;
 		font-family:AR BlANCA;
 		}
-
-		/*
-		.imageBox{
-		width:26%;
-		height:400px;
-		margin-left:7%;
-		}
-		*/
 		
 		#headText {text-shadow:
 			-3px -3px 0 #000,  
@@ -178,10 +136,10 @@
 			background-color:white;
 			color: black;
 			padding: 16px;
-			font-size: 20px;
+			font-size: 10px;
 			border: none;
 			cursor: pointer;
-			width:120px;
+			width:80px;
 			font-family: AR BLANCA;
 		}
 
@@ -201,6 +159,7 @@
 		.dropdown-content {
 			display: none;
 			position: absolute;
+			margin-top:55px;
 			background-color: #f9f9f9;
 			min-width: 120px;
 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -241,14 +200,13 @@ figure {
 }
 figure.sliderMain { 
   position: relative; width: 500%;
-  font-size: 0; animation: 10s slidy infinite; 
+  font-size: 0; animation: 20s slidy infinite; 
 }
 figure.sliderMain figure { 
   width: 20%; height: auto;
   display: inline-block;  position: inherit; 
 }
-figure.sliderMain img { width: 100%; height: 700px; padding-top:50px;
-}
+figure.sliderMain img { width: 100%; height: 700px; padding-top:50px; }
 
 figure.sliderMain figure figcaption { 
   position: absolute; top:50%; text-align:center;
@@ -290,14 +248,14 @@ figure.sliderMain figure figcaption {
   position:fixed;
   left:0;
   right:0;
-  margin: auto;
-  margin-left:auto;
+  margin:auto;
+  padding-right:20%;
   margin-top:100px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 30%;
+  width: 50%;
   height: 350px;
   padding: 0;
   //background-color:white;  
@@ -307,29 +265,31 @@ figure.sliderMain figure figcaption {
   box-sizing: content-box;
   border: 4px solid black;
   z-index:10;
-  min-width:500px;
+  min-width:400px;
   font-size:14px;
   font-family:Arial;
 }
 
 .window img {
-	/*height:200px;*/
+	height:100%;
+	min-width:50px;
+	padding-right:20px;
 
 }
 
 button {
-  /*margin-right: 10px;*/
-  /*float: left;*/
-  /*color: white;*/
+  margin-right: 35px;
+  float: left;
+  color: white;
   background: none; 
-  /*padding: 15px;*/
+  padding: 15px;
 }
 
 #text {
   text-align: justify;
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count:2; /* Firefox */
+    column-count: 2;
 }
 
 .stop-scrolling {
@@ -342,14 +302,6 @@ button {
     width: 100%;
 }
 	
-	#SeasonalSec{display:block; !important}
-		#WeddingSec{display:block; !important}
-		#PartySec{display:block; !important}	
-		
-		
-		.exitBtn {border:none; height:60px; width: 12%; margin-left:5px; margin:0;}
-		.imgExit {width:30px; height:30px;}
-		.winTitle {width:85%; float:left; padding-top:12px; height:100%;padding-left:10px; font-family:AR BLANCA; font-size:30px; color:#744176;}
 
 	} /* ending of media screen */
 		

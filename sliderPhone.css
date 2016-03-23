@@ -1,0 +1,307 @@
+
+@media screen and (orientation:landscape) and (max-width:639px) {
+
+/* http://imageslidermaker.com/blog/how-to-make-a-responsive-image-slider-using-jquery-and-css */
+/* slider 1 */
+
+.sliderTitle {
+visibility: hidden;
+}
+
+
+input[type="button"]
+{
+    border: none;
+    outline:none;
+}
+input[type="button"]::-moz-focus-inner {
+   border: 0;
+}
+
+.imageIconsL {
+	width:31%; height:100%; padding-right:20px;  margin-left:25px;
+	
+}
+
+.imageIconsM {
+	width:31%; height:100%; padding-right:20px;  
+	
+}
+
+.imageIconsR {
+	width:29%; height:100%; 
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 0;
+}
+
+.slider li {
+  padding: 0;
+  margin: 0;
+  width: 33.333333%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: none;
+}
+
+.slider li img {
+  border: none;
+  outline:none;
+  height:100%; 
+}
+
+.slider button {
+margin-left:2%;
+  position: absolute;
+  /*display: block;*/
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  background-color:#57285d;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  //opacity: 0;
+  z-index: 2;
+}
+
+.slider button.prev {
+  left: 0;
+}
+
+.slider button.next {
+  right: 0;
+}
+
+.slider button:hover, .slider button:active {
+  //opacity: 1.0;
+  opacity: .5;
+}
+
+.slider .content {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:71%;
+  /*right: 0;*/
+  height: 3em;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 3em;
+  padding: 0 1em;
+  font-size: 1.5em;
+}
+
+.slider .content a {
+  color: inherit;
+}
+
+/* slider 2 for weddings */
+
+.slider2 {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+}
+
+.slider2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 300%;
+  height: 200px;
+  top: 0;
+}
+
+.slider2 li {
+  padding: 0;
+  margin: 0;
+  width: 33.333333%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: none;
+}
+
+.slider2 li img {
+   border: none;
+  outline:none;
+  height:100%; 
+}
+
+.slider2 button {
+margin-left:2%;
+  position: absolute;
+  /*display: block;*/
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  background-color:#57285d;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  //opacity: 0;
+  z-index: 2;
+}
+
+.slider2 button.prev2 {
+  left: 0;
+}
+
+.slider2 button.next2 {
+  right: 0;
+}
+
+.slider2 button:hover, .slider2 button:active {
+  //opacity: 1.0;
+  opacity: .5;
+}
+
+.slider2 .content {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:71%;
+  /*right: 0;*/
+  height: 3em;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 3em;
+  padding: 0 1em;
+  font-size: 1.5em;
+}
+
+.slider2 .content a {
+  color: inherit;
+}
+
+/* slider 3 */
+
+.slider3 {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+}
+
+.slider3 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 300%;
+  height: 200px;
+  top: 0;
+}
+
+.slider3 li {
+  padding: 0;
+  margin: 0;
+  width: 33.333333%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: none;
+}
+
+.slider3 li img {
+ border: none;
+  outline:none;
+  height:100%; 
+}
+
+.slider3 button {
+margin-left:2%;
+  position: absolute;
+  /*display: block;*/
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  background-color:#57285d;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  //opacity: 0;
+  z-index: 2;
+}
+
+.slider3 button.prev3 {
+  left: 0;
+}
+
+.slider3 button.next3 {
+  right: 0;
+}
+
+.slider3 button:hover, .slider2 button:active {
+  //opacity: 1.0;
+  opacity: .5;
+}
+
+.slider3.content {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:71%;
+  /*right: 0;*/
+  height: 3em;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 3em;
+  padding: 0 1em;
+  font-size: 1.5em;
+}
+
+.slider3 .content a {
+  color: inherit;
+}
+
+
+
+
+}
+
