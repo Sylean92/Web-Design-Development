@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html background="seamless_paper_texture.png">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="mainStylesDesktop.css"/>
+	<link rel="stylesheet" type="text/css" href="mainStylesTablet.css"/>
+	<link rel="stylesheet" type="text/css" href="mainStylesPhone.css"/>
+
+	<link rel="stylesheet" type="text/css" href="slider.css"/>
+	<link rel="stylesheet" type="text/css" href="sliderTablet.css"/>
+	<link rel="stylesheet" type="text/css" href="sliderPhone.css"/>
+	<link rel="stylesheet" type="text/css" href="nav2Style.css"/>
+	
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="ShowPopup.js"></script> 
+	<script src="Product.js"></script>
+	<script type="text/javascript" src="fullSlider.js"></script> 
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="slider.js"></script>	
+	<script type="text/javascript" src="TabletPhoneShow.js"></script>	
+
+	<style>
+	.container {
+        margin: 0 auto;
+		margin-right:4.5%;
+        width: 92%;
+        //background-color: #fff;
+        min-height: 400px;
+		height:20px;
+      }
+	</style>
+	
+
+<script>
+
+window.addEventListener('load', mInlineJsLoadFunc, false);
+function mInlineJsLoadFunc()
+{
+    //document.getElementById("PartySec").style.display = "block";
+	//document.getElementById("WeddingSec").style.display = "block";
+	//document.getElementById("SeasonalSec").style.display = "block";
+}
+
+
+$(window).scroll(function(){
+    $("#nav").css("top",Math.max(0,1000-$(this).scrollTop()));
+});
+$(document).ready(function(){
+  $('#login-trigger').click(function(){
+    $(this).next('#login-content').slideToggle();
+    $(this).toggleClass('active');          
+    
+    if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+      else $(this).find('span').html('&#x25BC;')
+    })
+});
+
+</script>
+</head>
+
+<body background="seamless_paper_texture.png" class="parent">
+	<div id="nav2" class = "zoom" style="">
+		<div id="left" style="width:auto; display:inline-block;">
+			
+			
+			<div class="dropdown" style="margin-left:10px;float:left;">
+				<button onclick="myFunction()" class="dropbtn">Products</button>
+				<div id="myDropdown" class="dropdown-content">
+				<a href="cakes.html">Cakes</a>
+				<a href="cupcakes.html">Cupcakes</a>
+				</div>
+			</div>
+			<button onclick="location.href='Services.html';" style="margin-left:10px;" class="dropbtn">Services</button>
+		</div>
+		<div id="right" style="width:auto; display:inline-block; font-size:16px;font-family: Rockwell Extra Bold;">			
+			<button onclick="location.href='#'; " style="float:left;" class="dropbtn">Log in</button>
+			<button onclick="location.href='#';" style="float:right;" class="dropbtn">Sign up</button>
+			<button onclick="none" style="font-size:25px; color:black; border:none;">|</button>
+		</div>	
+		<div style="float:center; margin-left:44.1%; margin-right:auto; margin-top:30px;">
+			<a href="index.html"><img src="Images/logo.svng" style="width:15%; height:120px; "/>
+			</a>
+		</div>		
+	</div>
+	<div id="top" style="width:85%; margin-left:auto; margin-right: auto; padding-top:75px; border-bottom:2px solid white; background-image:url(Images/header4.jpg); background-repeat:no-repeat; background-size:100% 100%;">
+		<div id="headerImage" style="padding-top:45px; width:85%;">
+			<!--<h1 id="headText"style="font-family: Rockwell Extra Bold; font-size:4em; color:white;">
+				
+				Cupcakes
+				
+			</h1>-->
+		</div>
+	</div>
+	<div id="middle" style="">
+	
+		<div>
+			<h2 style="margin-left:auto; font-size:60px; font-family: AR BLANCA; color:black; margin-right:auto; text-align:center;">
+			Sylean's Serene Sweets <br> <span style="color:#57285d; font-family:AR BLANCA; font-size:45px;">Cupcakes </span>
+			</h2>
+			<h2 style="margin-left:auto; margin-right:auto; text-align:center;">
+			All cupcakes , aside the Seasonal , are customizable based on both color and flavor by request.
+			</br>
+			Seasonal cupcakes are only customizable by flavor.
+			</h2>
+			</br>
+		</div>
+			
+		<!-- Tablet and Phone option selector -->
+		<div id="sliderPicker" style="">
+			
+			<button id="WeddingSlider" style="" onclick="showWedding()"  >
+			Special Occassions & Weddings
+			</button>
+			
+			<button id="SeasonalSlider" style="" onclick="showSeason()" >
+			Seasonal - Winter Themed
+			</button>
+			<button id="PartySlider" style="" onclick="showParty()" >
+			Party Themed
+			</button>
+		</div>		
+		<!-- ********************************************** -->
+		
+		
+		<!-- Seasonal -->
+		<div id="SeasonalSec" style="">
+		
+			<div style="width:100%; text-align: center; opacity:.8; height:auto; padding-bottom:30px; clear:both;">
+				<button id="prev" style="background-color:none; border:none; float:left; padding-bottom:20px;"><img src="Images/arrowL.png" style="float:left; width:65px; margin-left:10%; height:95px;"/></button>
+				<button id="next" style="background-color:none; border:none; float:right; padding-bottom:20px;"><img src="Images/arrowR.png" style="float:right; width:65px; height:95px; margin-right:10%;"/></button>
+				<h2 class="sliderTitle" style="font-family: AR BLANCA; font-size:30px;"> Party Themed <h2>
+		
+			</div> 
+		
+		<div class="wrap" style="margin-left:auto; margin-right:auto; width:90%;height:auto; float:center;">
+		
+		<!-- http://imageslidermaker.com/blog/how-to-make-a-responsive-image-slider-using-jquery-and-css -->
+		<div class="container" style="">
+
+			<div class="slider">
+				<ul style="">
+				<li>
+				
+					<img class="imageIconsL" src="Images/season1.jpg" onClick=show1() style="">
+					<img class="imageIconsM" src="Images/season2.jpg" onClick=show2() style=""/>
+					<img class="imageIconsR" src="Images/season3.jpg" onClick=show3() style=""/>
+				</li>
+				<li>
+					<img class="imageIconsL" src="Images/season4.jpg" onClick=show4() style=""/>
+					<img class="imageIconsM" src="Images/season5.jpg" onClick=show5() style=""/>
+					<img class="imageIconsR" src="Images/season6.jpg" onClick=show6() style=""/>
+					
+				</li>
+				<li>
+					<img class="imageIconsL" src="Images/season10.jpg" onClick=show7() style=""/>
+					<img class="imageIconsM" src="Images/season8.jpg" onClick=show8() style=""/>
+					<img class="imageIconsR" src="Images/season9.jpg" onClick=show9() style=""/>
+				</li>
+				</ul>
+
+			</div>
+		</div>
+		
+		</div> 
+		</div><!-- end of SeasonalSec -->
+		
+			<div id="win1" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Winter Festival
+						</div>
+						<button onclick = "exitShow1()" class = "exitBtn" id="win1exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season1.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" class="submit" style="">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win2" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Forest Delight
+						</div>
+						<button onclick = "exitShow2()" class = "exitBtn" id="win2exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season2.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win3" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Avalanche
+						</div>
+						<button onclick = "exitShow3()" class = "exitBtn" id="win3exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season3.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win4" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Crystal Ball
+						</div>
+						<button onclick = "exitShow4()" class = "exitBtn" id="win4exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season4.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win5" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Christmas Tree
+						</div>
+						<button onclick = "exitShow5()" class = "exitBtn" id="win5exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season5.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win6" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Snow Ball
+						</div>
+						<button onclick = "exitShow6()" class = "exitBtn" id="win6exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season6.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win7" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Frosting Present
+						</div>
+						<button onclick = "exitShow7()" class = "exitBtn" id="win7exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season10.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win8" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Snow Fall
+						</div>
+						<button onclick = "exitShow8()" class = "exitBtn" id="win8exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season8.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win9" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Snow Flake
+						</div>
+						<button onclick = "exitShow9()" class = "exitBtn" id="win9exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/season9.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			
+		<!-- party cupcakes -->
+	
+		<div id="WeddingSec" style="">
+		
+			<div style="width:100%; text-align: center; opacity:.8; height:auto; clear:both;">
+				<button id="prev1" style="background-color:none; border:none; float:left;"><img src="Images/arrowL.png" style="float:left; width:65px; margin-left:10%; height:95px;"/></button>
+				<button id="next1" style="background-color:none; border:none; float:right; "><img src="Images/arrowR.png" style="float:right; width:65px; height:95px; margin-right:10%;"/></button>
+				<h2 class="sliderTitle" style="font-family: AR BLANCA; font-size:30px;"> Weddings & Special Occassions <h2>
+			</div>
+		
+		<div class="wrap" style="margin-left:auto; margin-right:auto; width:90%;height:auto; float:center;">
+	
+		<!-- http://imageslidermaker.com/blog/how-to-make-a-responsive-image-slider-using-jquery-and-css -->		
+		<div class="container">
+
+			<div class="slider2" style="margin-top:30px;">
+				<ul style="">
+				<li>
+					<img class="imageIconsL" src="Images/wedding1.jpg" onClick=show10() style=""/>
+					<img class="imageIconsM" src="Images/wedding2.jpg" onClick=show11() style=""/>
+					<img class="imageIconsR" src="Images/wedding3.jpg" onClick=show12() style=""/>
+				</li>
+				<li>
+					<img class="imageIconsL" src="Images/wedding4.jpg" onClick=show13() style=""/>
+					<img class="imageIconsM" src="Images/wedding5.jpg" onClick=show14() style=""/>
+					<img class="imageIconsR" src="Images/wedding6.jpg" onClick=show15() style=""/>
+					
+				</li>
+				<li>
+					<img class="imageIconsL" src="Images/wedding7.jpg" onClick=show16() style=""/>
+					<img class="imageIconsM" src="Images/wedding8.jpg" onClick=show17() style=""/>
+					<img class="imageIconsR" src="Images/wedding9.jpg" onClick=show18() style=""/>
+				</li>
+				</ul>
+
+			</div>
+		</div>
+			
+		</div> 
+		</div> 
+		
+		<!-- WeddingSec end -->
+		
+			<div id="win10" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							A Flower for Her
+						</div>
+						<button onclick = "exitShow10()" class = "exitBtn" id="win10exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding1.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win11" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Bouquet
+						</div>
+						<button onclick = "exitShow11()" class = "exitBtn" id="win11exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding2.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win12" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							I Do
+						</div>
+						<button onclick = "exitShow12()" class = "exitBtn" id="win12exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding3.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win13" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Love Grows
+						</div>
+						<button onclick = "exitShow13()" class = "exitBtn" id="win13exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding4.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win14" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Traditional
+						</div>
+						<button onclick = "exitShow14()" class = "exitBtn" id="win14exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding5.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win15" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Can't Get Anymore Elegant
+						</div>
+						<button onclick = "exitShow15()" class = "exitBtn" id="win15exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding6.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win16" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Mini Wedding Gift
+						</div>
+						<button onclick = "exitShow16()" class = "exitBtn" id="win16exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding7.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win17" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Pearls and Flowers
+						</div>
+						<button onclick = "exitShow17()" class = "exitBtn" id="win17exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding8.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win18" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Lace it Up
+						</div>
+						<button onclick = "exitShow18()" class = "exitBtn" id="win18exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/wedding9.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+
+		<!-- party cupcakes -->
+		
+		<div id="PartySec" style="">
+		
+			<div style="width:100%; text-align: center; opacity:.8; height:auto; padding-bottom:30px; clear:both;">
+				<button id="prev2" style="background-color:none; border:none; float:left; padding-bottom:20px;"><img src="Images/arrowL.png" style="float:left; width:65px; margin-left:10%; height:95px;"/></button>
+				<button id="next2" style="background-color:none; border:none; float:right; padding-bottom:20px;"><img src="Images/arrowR.png" style="float:right; width:65px; height:95px; margin-right:10%;"/></button>
+				<h2 class="sliderTitle" style="font-family: AR BLANCA; font-size:30px;"> Party Themed <h2>
+		
+			</div> 
+		
+		<div class="wrap" style="margin-left:auto; margin-right:auto; width:90%;height:auto; float:center;">
+		
+		<!-- http://imageslidermaker.com/blog/how-to-make-a-responsive-image-slider-using-jquery-and-css -->
+		<div class="container">
+
+			<div class="slider3">
+				<ul style="">
+				<li>
+					<img class="imageIconsL" src="Images/party1.jpg" onClick=show19() style=""/>
+					<img class="imageIconsM" src="Images/party2.jpg" onClick=show20() style=""/>
+					<img class="imageIconsR" src="Images/party3.jpg" onClick=show21() style=""/>
+				</li>
+				<li>
+					<img class="imageIconsL" src="Images/party4.jpg" onClick=show22() style=""/>
+					<img class="imageIconsM" src="Images/party5.jpg" onClick=show23() style=""/>
+					<img class="imageIconsR" src="Images/party6.jpg" onClick=show24() style=""/>
+					
+				</li>
+				<li>
+					<img class="imageIconsL" src="Images/party7.jpg" onClick=show25() style=""/>
+					<img class="imageIconsM" src="Images/party8.jpg" onClick=show26() style=""/>
+					<img class="imageIconsR" src="Images/party9.jpg" onClick=show27() style=""/>
+				</li>
+				</ul>
+
+			</div>
+		</div>
+			
+		</div> 
+		</div>
+		<!-- end PartySec -->
+
+		
+			<div id="win19" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Rainbow Fun
+						</div>
+						<button onclick = "exitShow19()" class = "exitBtn" id="win19exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party1.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win20" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Swirly
+						</div>
+						<button onclick = "exitShow20()" class = "exitBtn" id="win20exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party2.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win21" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Sugar Rush
+						</div>
+						<button onclick = "exitShow21()" class = "exitBtn" id="win21exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party3.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win22" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Flower Party
+						</div>
+						<button onclick = "exitShow22()" class = "exitBtn" id="win22exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party4.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win23" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Party Hat
+						</div>
+						<button onclick = "exitShow23()" class = "exitBtn" id="win23exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party5.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win24" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Everyday Party
+						</div>
+						<button onclick = "exitShow24()" class = "exitBtn" id="win24exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party6.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win25" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Sprinkle of Love
+						</div>
+						<button onclick = "exitShow25()" class = "exitBtn" id="win25exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party7.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win26" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							The Festive Choice
+						</div>
+						<button onclick = "exitShow26()" class = "exitBtn" id="win26exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party8.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+			<div id="win27" class="window" style="display:none;" >
+				<div>
+					<div class="popTop" style="width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;">
+						<div class="winTitle" style="">
+							Even a Party Can be Elegant
+						</div>
+						<button onclick = "exitShow27()" class = "exitBtn" id="win27exit">
+							<img class="imgExit" src="Images/exit.png"></img>
+						</button>
+					</div>
+					<div style="float:left; width:50%; padding-left:10px; height:100%;">
+						<p>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci elit, 
+						lobortis nec neque in, condimentum gravida velit. Suspendisse maximus nisl et 
+						vehicula placerat. Sed elit turpis, venenatis sit amet tortor vel, interdum cursus mi. 
+
+						<br>
+						<br><span style="font-family:AR BLANCA; font-size:20px; color:#744176;" > Price:</span>
+						<br><strong>Half Dozen:</strong> <span style="font-family:AR BLANCA; color:#744176;" >$</span>7.00
+						<br><strong>Dozen:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>12.50
+						<br><strong>Party Size [20 cupcakes]:</strong>  <span style="font-family:AR BLANCA; color:#744176;" >$</span>18.00
+
+						
+						</p>
+					</div>
+					<div style="float:right; padding-left:2%; width:50%;height:100%;">
+						<img src = "Images/party9.jpg" style="margin-left:13%; width:175px; padding-top:15px;"/>
+						<br><br>
+						<button type="submit" style="margin-left:75px;float:center; width:85px; background:white; color:black; height:35px; padding:2px;">submit</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	
+	<div id="footer" style="clear:both;"></div>
+	
+</body>
+</html>

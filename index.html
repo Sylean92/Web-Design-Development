@@ -1,0 +1,80 @@
+﻿ <!DOCTYPE html>
+<html background="seamless_paper_texture.png">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="mainStylesDesktop.css"/>
+	<link rel="stylesheet" type="text/css" href="mainStylesTablet.css"/>
+
+	<link rel="stylesheet" type="text/css" href="slider.css"/>
+	<link rel="stylesheet" type="text/css" href="sliderTablet.css"/>
+	<link rel="stylesheet" type="text/css" href="nav2Style.css"/>
+	
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="Product.js"></script>
+	
+	
+</head>
+
+<body background="seamless_paper_texture.png">
+
+	<div id="nav2" class = "zoom" style="">
+		<div id="left" style="width:auto; display:inline-block;">
+			
+			
+			<div class="dropdown" style="margin-left:10px;float:left;">
+				<button onclick="myFunction()" class="dropbtn">Products</button>
+				<div id="myDropdown" class="dropdown-content">
+				<a href="cakes.html">Cakes</a>
+				<a href="cupcakes.html">Cupcakes</a>
+				</div>
+			</div>
+			<button onclick="location.href='Services.html';" style="margin-left:10px;" class="dropbtn">Services</button>
+		</div>
+		<div id="right" style="width:auto; display:inline-block; font-size:16px;font-family: Rockwell Extra Bold;">			
+			<button onclick="location.href='#'; " style="float:left;" class="dropbtn">Log in</button>
+			<button onclick="location.href='#';" style="float:right;" class="dropbtn">Sign up</button>
+			<button onclick="none" style="font-size:25px; color:black; border:none;">|</button>
+		</div>	
+		<div style="float:center; margin-left:44.1%; margin-right:auto; margin-top:30px;">
+			<a href="index.html"><img src="Images/logo.svng" style="width:15%; height:120px; "/>
+			</a>
+		</div>		
+	</div>
+	
+	
+	
+	
+	<div id="main" style="padding-top:20px;">
+	<!--
+		<div style="font-size:25px; text-align:center; padding-top:300px;">
+			<p class="title2" style="font-size:40px;"> <span class="title">Affordable Elagance</span> </br>Can't get any better than this!</p>
+		</div>
+	-->
+	<div id="captioned-gallery">
+	<figure class="sliderMain">
+		<figure>
+			<img id = "img1" src="Images/HDBackground.jpg" alt>
+			<figcaption><span class="title">Affordable Elagance</span> </br><span class="title2" >Can't get any better than this</span></figcaption>
+		</figure>
+		<figure>
+			<a href="cupcakes.html">
+			<img src="Images/cupCakeBack.jpg" alt>
+			<figcaption>
+				<span class="title">Cupcakes</span>
+				
+			</figcaption>
+			</a>
+		</figure>
+		<figure>
+			<img src="Images/CakeBack.jpg" alt>
+			<figcaption><span class="title">Cakes</span></figcaption>
+		</figure>
+	</figure>
+	</div>
+	
+	</div>
+	<div id="footer" style="clear:both;"></div>
+	
+</body>
+</html>
