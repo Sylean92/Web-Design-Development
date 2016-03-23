@@ -26,12 +26,9 @@
 		width:100%; text-align: center; opacity:.8; height:auto; clear:both;
 		}
 		.popTop{width:100%; border-bottom:2px solid grey; float:left; height:60px; background-color:white;}
-		
-		
-		
-		.imageIconsL:hover  {opacity: .5; }
-		.imageIconsR:hover {opacity: .5; }
-		.imageIconsM:hover {opacity: .5; }
+		.imageIconsL:hover  {opacity: .5!important; }
+		.imageIconsR:hover {opacity: .5!important; }
+		.imageIconsM:hover {opacity: .5!important; }
 		.titleText {font-size:60px;} 
 		
 		/* Tablet and Phone hidden for Desktop*/
